@@ -1,29 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { Nav, Ul, StyledLink } from '../navBar/navBar.styled';
+import NavData from './navData';
 
-
-const NavData = ({ links }) => {
-
-    return (
-        <Nav>
-            <Ul>
-                {links.map((link, index) => {
-                    const { to, text } = link.node;
-
-                    return (
-                        <li key={index}>
-                            <StyledLink to={to}>
-                                {text}
-                            </StyledLink>
-                        </li>
-                    )
-                })}
-            </Ul>
-        </Nav>
-    );
-};
 
 const NavBar = () => {
     return (
@@ -34,9 +12,6 @@ const NavBar = () => {
     )
 }
 
-NavBar.propTypes = {
-    links: PropTypes.array
-};
 
 export default NavBar;
 
