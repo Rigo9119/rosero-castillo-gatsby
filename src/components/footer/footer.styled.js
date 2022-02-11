@@ -11,9 +11,14 @@ export const StyledFooter = styled.footer`
     padding: 25px 40px;
     width: 100%;
 
+    @media ${device.tablet} {
+        padding: 22px 30px;
+    }
+
     @media ${device.laptop} {
         justify-content: space-between;
         flex-flow: row nowrap;
+        padding: 22px 40px;
     }
 `;
 
@@ -23,19 +28,17 @@ export const FooterLeft = styled.div`
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    margin-bottom: 20px;
     width: 100%;
 
     @media ${device.laptop} {
-        width: 30%;
+        margin-bottom: 0;
+        width: 15%;
     }
 `;
 
 export const MediaList = styled(NavList)`
     width: 100%;
-    
-    @media ${device.laptop} {
-        width: 30%;
-    }
 `;
 
 export const MediaItem = styled.li`
@@ -59,5 +62,15 @@ export const FooterRight = styled.div`
     }
 `;
 
-export const CopyRight = styled.p``;
+export const CopyRight = styled.p`
+    margin-top: 10px;
+
+    @media ${device.tablet} {
+        margin-top: 0;
+    }
+
+    @media ${device.laptop} {
+        margin-top: 0;
+    }
+`;
 

@@ -12,10 +12,10 @@ export const StyledHeader = styled.header`
     width: 100%;
 
     @media ${device.tablet} {
-        padding: 25px 30px;
+        padding: 20px 30px;
     }
 
     @media ${device.laptop} {
-        padding: 25px 40px;
+        padding: 18px 40px;
     }
 `;
