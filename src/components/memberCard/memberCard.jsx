@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, CardImage, Image, CardContent, CardTitle, CardSubtitle, CardDesc } from './member.styled';
 
 
-const Membercard = ({ nombre, especialidad, descripcion, universidad }) => {
+const Membercard = ({ nombre, especialidad, descripcion, universidad, src }) => {
 
     return (
-        <div>
-            <p>{nombre}</p>
-            <p>{universidad}</p>
-            <p>{especialidad}</p>
-            <p>{descripcion}</p>
-        </div>
+        <Card>
+            <CardImage>
+                <Image src={src} alt='Imagen'/>
+            </CardImage>
+            <CardContent>
+                <CardTitle>{nombre}</CardTitle>
+                <CardSubtitle>{universidad}</CardSubtitle>
+                <CardSubtitle>{especialidad}</CardSubtitle>
+                <CardDesc>{descripcion}</CardDesc>
+            </CardContent>
+        </Card>
     );
 };
 

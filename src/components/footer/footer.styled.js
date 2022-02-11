@@ -8,16 +8,19 @@ export const StyledFooter = styled.footer`
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
+    margin-top: 12px;
     padding: 25px 40px;
     width: 100%;
 
     @media ${device.tablet} {
+        margin-top: 20px;
         padding: 22px 30px;
     }
 
     @media ${device.laptop} {
         justify-content: space-between;
         flex-flow: row nowrap;
+        margin-top: 40px;
         padding: 22px 40px;
     }
 `;

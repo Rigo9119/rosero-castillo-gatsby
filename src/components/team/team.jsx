@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Membercard from '../memberCard/memberCard';
-import { StyledSection, Cards } from './team.styled';
+import { StyledSection, TeamTitle, Cards } from './team.styled';
 
 
 const Team = ({ team }) => {
     
     return (
         <StyledSection>
-            <h2>Este es nuestro equipo</h2>
+            <TeamTitle>Team title</TeamTitle>
             <Cards>
                 {team.map((member, index) => {
-                    const {nombre, especialidad, descripcion, universidad} = member.node;
+                    const { nombre, especialidad, descripcion, universidad } = member.node;
 
                     return (
                         <Membercard 

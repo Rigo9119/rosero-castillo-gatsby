@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import styled from "styled-components";
 import { device } from '../../styles/mediaQueries';
 
@@ -16,4 +17,8 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
     list-style: none;
+`;
+
+export const StyledLink = styled(Link)`
+    color: gray;
 `;

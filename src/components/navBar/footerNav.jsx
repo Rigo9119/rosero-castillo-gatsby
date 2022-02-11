@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { NavList, NavItem } from './footerNav.styled';
+import { NavList, NavItem, StyledLink } from './footerNav.styled';
 
 const FooterNav = ({ links }) => {
 
@@ -12,7 +11,9 @@ const FooterNav = ({ links }) => {
 
                 return (
                     <NavItem key={index}>
-                        <Link to={to}>{text}</Link>
+                        <StyledLink to={to}>
+                            {text}
+                        </StyledLink>
                     </NavItem>
                 )
             })}
