@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <StyledHeader>
             <div>
-                <img src="" alt="Rosero Castillo Abogados"/>
+                <img src="" alt="Rosero Castillo"/>
             </div>
             <NavBar />
         </StyledHeader>

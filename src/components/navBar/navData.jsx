@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Nav, Ul, StyledLink } from '../navBar/navBar.styled';
+import { Nav, NavList, ListItem, StyledLink, Hamburguer, BurguerLine} from '../navBar/navBar.styled';
 
 
 const NavData = ({ links }) => {
+    const [openMenu, setOpenMenu] = useState(false);
+    console.log(openMenu)
     return (
-        <Nav>
-            <Ul>
-                {links.map((link, index) => {
-                    const { to, text } = link.node;
+        <>
+            <Nav openMenu={openMenu}>
+                <NavList>
+                    {links.map((link, index) => {
+                        const { to, text } = link.node;
 
-                    return (
-                        <li key={index}>
-                            <StyledLink to={to}>
-                                {text}
-                            </StyledLink>
-                        </li>
-                    )
-                })}
-            </Ul>
-        </Nav>
+                        return (
+                            <ListItem key={index}>
+                                <StyledLink to={to}>
+                                    {text}
+                                </StyledLink>
+                            </ListItem>
+                        )
+                    })}
+                </NavList>
+            </Nav>
+            <Hamburguer 
+                openMenu={openMenu} 
+                onClick={() => setOpenMenu(!openMenu)}>
+                <BurguerLine></BurguerLine>
+                <BurguerLine></BurguerLine>
+                <BurguerLine></BurguerLine>
+            </Hamburguer>
+        </>
     );
 };
 
